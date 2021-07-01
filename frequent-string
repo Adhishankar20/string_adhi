@@ -1,0 +1,20 @@
+import operator
+
+if __name__ == '__main__':
+
+    text = input("Enter the text : \n ")
+    string_dict = dict()
+    for letter in text:
+        if letter not in string_dict:
+            string_dict[letter] = text.count(letter)    
+    ordered_answer = sorted(string_dict.items(), key=operator.itemgetter(1), reverse=True)
+    print (ordered_answer)
+
+input_string = input("Enter the text : \n ")
+frequencies = {} 
+  
+for char in input_string: 
+   if char in frequencies: 
+      frequencies[char] += 1
+   else: 
+      frequencies[char] = 1
